@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="weather-container">
+
+    <div class="container">
+
+        <p class="live-label">🟠 LIVE CONDITIONS</p>
+
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name...">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <p id="error-msg"></p>
+
+        <div class="weather-card">
+
+            <p class="now-in">Now in <strong id="city-name">Lucknow, India</strong></p>
+
+            <div class="card-top">
+                <div class="left">
+                    <p class="temp" id="temp">32<span>°C</span></p>
+                    <p class="condition" id="condition">Clear sky</p>
+                </div>
+                <div class="right">
+                    <img id="weather-icon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="weather icon">
+                </div>
+            </div>
+
+            <div class="time-bar">
+                <div class="time-labels">
+                    <span>06:00</span>
+                    <span>12:00</span>
+                    <span>18:00</span>
+                    <span>24:00</span>
+                </div>
+                <div class="time-track">
+                    <div class="time-dot"></div>
+                    <svg viewBox="0 0 400 60" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 0 55 Q 200 0 400 55" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="detail-box">
+                    <p>HUMIDITY</p>
+                    <h3 id="humidity">60%</h3>
+                </div>
+                <div class="detail-box">
+                    <p>WIND</p>
+                    <h3 id="wind">12 km/h</h3>
+                </div>
+                <div class="detail-box">
+                    <p>FEELS LIKE</p>
+                    <h3 id="feels-like">35°</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="footer-note" id="footer-note">demo data · swap in a live API when your backend is ready</p>
+
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
