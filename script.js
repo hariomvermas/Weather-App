@@ -74,8 +74,12 @@ function updateUI(data) {
     icon.src =
         `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
-    icon.alt =
-        data.weather[0].description;
+    icon.alt = data.weather[0].description;
+
+    var condition = data.weather[0].main.toLowerCase();
+    var container = document.querySelector('.weather-card');
+    container.className = 'weather-card ' + condition;
+
     document.getElementById('humidity').textContent =
         `${data.main.humidity}%`;
     document.getElementById('wind').textContent =
