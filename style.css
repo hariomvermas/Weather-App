@@ -307,3 +307,87 @@ hr {
 .right-container .detail-box h3 {
     font-size: 22px;
 }
+
+
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .weather-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        min-height: 100vh;
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 10px 0;
+    }
+
+    .right-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 16px;
+        height: auto;
+        gap: 12px;
+    }
+
+    .right-container .detail-box {
+        flex: 1 1 calc(50% - 6px);
+        min-width: 130px;
+    }
+
+    .temp {
+        font-size: 60px;
+    }
+
+    .right img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .detail-box h3 {
+        font-size: 16px;
+    }
+
+    .right-container .detail-box h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .temp {
+        font-size: 48px;
+    }
+
+    .temp span {
+        font-size: 24px;
+    }
+
+    .right img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .search-box input,
+    .search-box button {
+        font-size: 13px;
+        padding: 11px 14px;
+    }
+
+    .live-label {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .right-container .detail-box {
+        flex: 1 1 100%;
+    }
+}
