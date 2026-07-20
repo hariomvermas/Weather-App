@@ -8,11 +8,16 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-<div class="weather-container">
 
+<div class="weather-container">
     <div class="container">
 
-        <p class="live-label">🟠 LIVE CONDITIONS</p>
+        <div class="label-container">
+                <h1 class="live-label">🟠 LIVE WEATHER CONDITIONS</h1>
+            <hr>
+            <p class="footer-note label-e">Get real-time weather updates for any city around the world.</p>
+        </div>
+
 
         <div class="search-box">
             <input type="text" id="city-input" placeholder="Enter city name...">
@@ -68,6 +73,30 @@
         </div>
 
         <p class="footer-note" id="footer-note">demo data · swap in a live API when your backend is ready</p>
+
+    </div>
+
+    <div class="right-container">
+
+        <div class="detail-box">
+            <p>🌡️ MIN / MAX TEMP</p>
+            <h3 id="temp-min">--</h3>
+            <h3 id="temp-max">--</h3>
+        </div>
+
+        <div class="detail-box">
+            <p>🌅 SUNRISE</p>
+            <h3 id="sunrise">--</h3>
+            <p>🌇 SUNSET</p>
+            <h3 id="sunset">--</h3>
+        </div>
+
+        <div class="detail-box">
+            <p>🌊 SEA LEVEL</p>
+            <h3 id="sea-level">--</h3>
+            <p>🏔️ GROUND LEVEL</p>
+            <h3 id="ground-level">--</h3>
+        </div>
 
     </div>
 </div>

@@ -82,6 +82,15 @@ function updateUI(data) {
         `${Math.round(data.wind.speed * 3.6)} km/h`;
     document.getElementById('feels-like').textContent =
         `${Math.round(data.main.feels_like)}°`;
+
+    // right container
+    document.getElementById('temp-min').textContent = Math.round(data.main.temp_min) + '°C';
+    document.getElementById('temp-max').textContent = Math.round(data.main.temp_max) + '°C';
+    document.getElementById('sunrise').textContent  = formatTime(data.sys.sunrise);
+    document.getElementById('sunset').textContent   = formatTime(data.sys.sunset);
+    document.getElementById('sea-level').textContent    = data.main.sea_level ? data.main.sea_level + ' hPa' : 'N/A';
+    document.getElementById('ground-level').textContent = data.main.grnd_level ? data.main.grnd_level + ' hPa' : 'N/A';
+
     document.getElementById('footer-note').textContent =
         `Last updated: ${new Date().toLocaleString()}`;
     updateTimeDot();
@@ -102,6 +111,16 @@ function updateTimeDot() {
 
 function capitalizeWords(text) {
     return text.replace(/\b\w/g, letter => letter.toUpperCase());
+}
+
+function formatTime(unixTime) {
+    var date = new Date(unixTime * 1000);
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12 || 12;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    return hours + ':' + minutes + ' ' + ampm;
 }
 
 updateTimeDot();
